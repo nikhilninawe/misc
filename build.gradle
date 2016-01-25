@@ -1,0 +1,23 @@
+apply plugin: 'application'
+mainClassName = "com.ozone.main.Application"
+
+repositories {
+    maven { url "http://repo.spring.io/libs-snapshot" }
+    
+}
+configurations {
+	  compile.exclude group: 'log4j'
+	  compile.exclude group: 'org.slf4j', module: 'log4j-over-slf4j'
+}
+
+jar {
+    baseName = 'misc'
+}
+
+dependencies {
+	
+    compile('org.mongodb.morphia:morphia:1.1.0',
+    		'commons-io:commons-io:2.4'
+    		)
+    		
+}
