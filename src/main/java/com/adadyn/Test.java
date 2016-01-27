@@ -10,6 +10,7 @@ public class Test {
 	
 	@Id private ObjectId id;
 	@Property private String data;
+	@Property private String name;
 	public ObjectId getId() {
 		return id;
 	}
@@ -21,6 +22,12 @@ public class Test {
 	}
 	public void setData(String data) {
 		this.data = data;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 
 }

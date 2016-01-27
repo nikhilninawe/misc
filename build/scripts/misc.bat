@@ -69,10 +69,10 @@ set CMD_LINE_ARGS=%$
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\misc.jar;%APP_HOME%\lib\morphia-1.1.0.jar;%APP_HOME%\lib\mongo-java-driver-3.0.2.jar;%APP_HOME%\lib\proxytoys-1.0.jar;%APP_HOME%\lib\cglib-nodep-2.2.2.jar
+set CLASSPATH=%APP_HOME%\lib\misc.jar;%APP_HOME%\lib\morphia-1.1.0.jar;%APP_HOME%\lib\commons-io-2.4.jar;%APP_HOME%\lib\mongo-java-driver-2.13.3.jar;%APP_HOME%\lib\proxytoys-1.0.jar;%APP_HOME%\lib\cglib-nodep-2.2.2.jar
 
 @rem Execute misc
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %MISC_OPTS%  -classpath "%CLASSPATH%" com.ozone.main.Application %CMD_LINE_ARGS%
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %MISC_OPTS%  -classpath "%CLASSPATH%" com.adadyn.MongoSave %CMD_LINE_ARGS%
 
 :end
 @rem End local scope for the variables with windows NT shell
