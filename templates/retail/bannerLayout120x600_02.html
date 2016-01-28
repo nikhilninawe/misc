@@ -70,6 +70,7 @@
             left: 14px;
             object-fit: cover;
             border: 1px solid #a7a9ac;
+            overflow: hidden;
         }
         
         .productName {
@@ -185,7 +186,7 @@
          var prlist = document.getElementById('product');
          for (var i = 0; i < jsonlength; ++i){
              
-             row = '<a id="productGrup'+i+'" href="'+dataJson[i].product_url+'" target="_blank"><div class="product"><img src="'+dataJson[i].product_smallimage+'"></div><div class="productName" id="productName'+i+'">'+dataJson[i].product_name+'</div><div class="productlistPrice">'+dataJson[i].product_currency+''+dataJson[i].product_retailprice+'</div><div class="productYouPay">'+dataJson[i].product_currency+''+dataJson[i].product_price+'</div><div class="productSavePrice" id="productSavePrice'+i+'"></div></a>';
+             row = '<a id="productGrup'+i+'" href="'+dataJson[i].product_url+'" target="_blank"><div class="product"><img src="'+dataJson[i].product_smallimage+'"></div><div class="productName" id="productName'+i+'">'+dataJson[i].product_name+'</div><div class="productlistPrice"> '+ unicodeToChar(dataJson[index].product_currency)+' '+dataJson[i].product_retailprice+'</div><div class="productYouPay"> '+unicodeToChar(dataJson[index].product_currency)+' '+dataJson[i].product_price+'</div><div class="productSavePrice" id="productSavePrice'+i+'"></div></a>';
              prlist.insertAdjacentHTML('beforeend', row);
              ellipsizeTextBox('productName'+i);
              calSavings(i);
@@ -201,11 +202,15 @@
                     el.innerHTML = el.innerHTML + "...";
                 }  
          }
+        function unicodeToChar(text) {
+            var res = text.replace("U+", "&#x");
+            return res.toLowerCase();
+        }
         function calSavings(index){
             
           if(dataJson[index].product_discount != 0){
                 var savingsamnt = dataJson[index].product_retailprice - dataJson[index].product_price; 
-             document.getElementById('productSavePrice'+index).innerHTML = 'Savings: '+dataJson[index].product_currency+''+savingsamnt+'';
+             document.getElementById('productSavePrice'+index).innerHTML = 'Savings:  '+unicodeToChar(dataJson[index].product_currency)+' '+savingsamnt+'';
             }else{
               document.getElementById('productSavePrice'+index).innerHTML = '';  
             }  
@@ -213,8 +218,8 @@
         }
    
     }
-    
-   </script>
+   
+</script>
 <script src='/getProducts?adv_id={adv_id}&callbackId=addProductInformationInHTML&reqNumOfItems={no_of_products}'>
 </script>
 </body>

@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title> Banner Layout 728x80 03 </title>
+        <title> Banner Layout 728x80 01 </title>
         <style type="text/css">
             * {
                 margin: 0px;
@@ -48,17 +48,17 @@
             }
 
             #middLine {
-                border-left: 1px solid #828186;
+                background: #e6e7e8;
                 position: absolute;
                 z-index: 1;
                 top: 0px;
-                left: 435px;
-                width: 290px;
+                left: 380px;
+                width: 346px;
                 height: 88px;
             }
 
             #sublogo {
-                width: 136px;
+                width: 126px;
                 height: 78px;
                 text-align: center;
                 padding: 5px;
@@ -72,41 +72,46 @@
                 max-height: 80%;
             }
 
-            .product {
+            #product {
                 width: 80px;
                 height: 80px;
                 text-align: center;
                 position: absolute;
                 z-index: 1;
-                top: 2px;
-                left: 18px;
+                top: 3px;
+                left: 150px;
                 object-fit: cover;
                 border: 1px solid #a7a9ac;
             }
 
-            .arrowRight {
+            #product img{
+                width: 80px;
+                height: 80px;
+            }
+
+            #arrowRight {
                 position: absolute;
                 z-index: 4;
                 top: 37px;
-                left: 104px;
+                left: 232px;
                 cursor: pointer;
             }
 
-            .arrowLeft {
+            #arrowLeft {
                 position: absolute;
                 z-index: 4;
                 top: 37px;
-                left: 0px;
+                left: 136px;
                 cursor: pointer;
             }
 
-            .productName {
+            #productName {
                 position: absolute;
-                width: 150px;
+                width: 120px;
                 height: 30px;
                 overflow: hidden;
                 top: 3px;
-                left: 130px;
+                left: 255px;
                 font-family: Calibri, Arial, helvetica, sans-serif !important;
                 font-size: 11px;
                 color: #58585a;
@@ -115,13 +120,13 @@
                 display: block;
             }
 
-            .productlistPrice {
+            #productlistPrice {
                 position: absolute;
-                width: 150px;
+                width: 120px;
                 height: 15px;
                 overflow: hidden;
                 top: 28px;
-                left: 130px;
+                left: 255px;
                 font-family: Calibri, Arial, helvetica, sans-serif !important;
                 font-size: 11px;
                 color: #939598;
@@ -130,13 +135,13 @@
                 text-decoration: line-through;
             }
 
-            .productYouPay {
+            #productYouPay {
                 position: absolute;
-                width: 150px;
+                width: 120px;
                 height: 15px;
                 overflow: hidden;
                 top: 41px;
-                left: 130px;
+                left: 255px;
                 font-family: Calibri, Arial, helvetica, sans-serif !important;
                 font-size: 11px;
                 color: #58585a;
@@ -144,13 +149,13 @@
                 z-index: 4;
             }
 
-            .productSavePrice {
+            #productSavePrice {
                 position: absolute;
-                width: 150px;
+                width: 120px;
                 height: 15px;
                 overflow: hidden;
                 top: 53px;
-                left: 130px;
+                left: 255px;
                 font-family: Calibri, Arial, helvetica, sans-serif !important;
                 font-weight: bold;
                 font-size: 11px;
@@ -159,21 +164,20 @@
                 z-index: 4;
             }
 
-            .divBTN {
-                width: 150px;
-                height: 22px;
+            #divBTN {
+                width: 120px;
+                height: 25px;
                 text-align: left;
                 position: absolute;
                 top: 65px;
-                left: 130px;
-                z-index: 5;
+                left: 255px;
             }
 
-            .divBTN .button {
+            #divBTN #button {
                 display: inline;
                 overflow: hidden;
                 font-family: Calibri, Arial, helvetica, sans-serif !important;
-                font-size: 11px;
+                font-size: 12px;
                 font-weight: bold;
                 padding: 2px 10px;
                 color: #fff;
@@ -182,28 +186,53 @@
                 cursor: pointer;
             }
 
-            #producGrupOne {
+            #customInfo {
                 position: absolute;
-                top: 1px;
-                left: 146px;
-                width: 280px;
-                height: 86px;
+                width: 336px;
+                height: 20px;
+                overflow: hidden;
+                top: 4px;
+                left: 385px;
+                font-family: Calibri, Arial, helvetica, sans-serif !important;
+                font-size: 16px;
+                color: #58585a;
+                text-align: center;
+                z-index: 4;
+                display: block;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+                line-height: 1.2;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
             }
 
-            #producGrupTwo {
+            #nav {
                 position: absolute;
-                top: 1px;
-                left: 446px;
-                width: 280px;
-                height: 86px;
+                top: 28px;
+                left: 431px;
+                z-index: 3;
             }
-            #product0 img{
-                width: 62px;
-                height: 62px;
+
+            #nav a img {
+                display: inline-block;
+                width: 52px;
+                height: 52px;
+                margin: 0px 4px 0px 0px;
+                border: 1px solid #c0bfbf;
             }
-            #product1 img{
-                width: 80px;
-                height: 80px;
+
+            #nav a:hover img {
+                width: 52px;
+                height: 52px;
+                border: 1px solid #000;
+                cursor: pointer;
+                object-fit: cover;
+            }
+
+            #nav a.active img {
+                width: 52px;
+                height: 52px;
+                border: 1px solid #000;
             }
         </style>
     </head>
@@ -212,33 +241,24 @@
         <div id="subWrapper">
             <div id="sublogo"><img src="{logo}"></div>
 
-            <div id="producGrupOne">           
-                <a href="#" id="prlanding0" target="_blank">   
-                    <div class="product" id="product0"> </div>  
-                    <div class="productName" id="productName0"></div>      
-                    <div class="productlistPrice" id="productlistPrice0"></div>
-                    <div class="productYouPay" id="productYouPay0"></div>
-                    <div class="productSavePrice" id="productSavePrice0"></div>
-                </a>
-                <div class="divBTN">
-                    <div class="button"> {button_text} </div>
+            <div id="arrowLeft"><img onclick="changeImg(-1)" src="//dt0cmlv19kyas.cloudfront.net/creatives/appBanner/bannerArrowL.png"> </div>
+            <div id="arrowRight"><img onclick="changeImg(1)" src="//dt0cmlv19kyas.cloudfront.net/creatives/appBanner/bannerArrowR.png"> </div>
+            <a href="#" id="prlanding" target="_blank">
+                <div id="product"></div>
+
+                <div id="productName"> </div>
+                <div id="productlistPrice"></div>
+                <div id="productYouPay"></div>
+                <div id="productSavePrice"></div>
+                <div id="divBTN">
+                    <div id="button"> {button_text} </div> 
                 </div>
-            </div>
 
-            <div id="middLine"> </div>
+                <div id="middLine"> </div>
+                <div id="customInfo"> {message} </div>
+            </a>
+            <div id="nav">
 
-            <div id="producGrupTwo">
-
-                <a href="#" id="prlanding1" target="_blank">   
-                    <div class="product" id="product1"> </div>  
-                    <div class="productName" id="productName1"></div>      
-                    <div class="productlistPrice" id="productlistPrice1"></div>
-                    <div class="productYouPay" id="productYouPay1"></div>
-                    <div class="productSavePrice" id="productSavePrice1"></div>
-                </a>
-                <div class="divBTN">
-                    <div class="button"> {button_text} </div>
-                </div>
             </div>
 
         </div>
@@ -251,32 +271,57 @@
             var index = 0;
             var keepGoing = true;
             var numberof = 0;
+            var slideNumber = 0;
+            var jsonlength;
 
             function addProductInformationInHTML(jsonArray) {
+
+                window.changeImg = function (step) {
+                    keepGoing = false;
+                    clearInterval(autos);
+                    slideNumber += step;
+                    if (slideNumber == jsonlength) {
+                        slideNumber = 0;
+                    } else if (slideNumber == -1) {
+                        slideNumber = jsonlength - 1;
+                    }
+                    dContent(slideNumber);
+                }
+
+
                 if (!(jsonArray instanceof Array)) {
                     jsonArray = jsonArray.products;
                 }
                 dataJson = jsonArray;
+                jsonlength = dataJson.length;
                 var prlist = document.getElementById('product');
                 var navlist = document.getElementById('nav');
 
                 for (var i = 0; i < dataJson.length; ++i) {
-                    prlist = document.getElementById('product' + i);
-                    row = '<img src="' + dataJson[i].product_smallimage + '" id="primg' + i + '" style="disply:none;" class="primgs">';
+                    row = '<img src="' + dataJson[i].product_smallimage + '" id="primg' + i + '"  style="disply:none;" class="primgs">';
+                    nav = '<a class="navigations" href="' + dataJson[index].product_url + '" onmouseover="clicknav(' + i + ');"><img src="' + dataJson[i].product_smallimage + '" ></a>';
                     prlist.insertAdjacentHTML('beforeend', row);
-                    document.getElementById('productName' + i).innerHTML = dataJson[i].product_name;
-                    document.getElementById('productlistPrice' + i).innerHTML = 'List Price: ' + '$' + dataJson[i].product_retailprice;
-                    document.getElementById('productYouPay' + i).innerHTML = 'You Pay: ' + '$' + dataJson[i].product_price;
-                    document.getElementById('productSavePrice' + i).innerHTML = 'Savings: ' + '$' + dataJson[i].product_discount;
-                    document.getElementById('prlanding' + i).href = dataJson[i].product_smallimage;
+                    navlist.insertAdjacentHTML('beforeend', nav);
                 }
-
                 itemAmt = document.getElementsByClassName('primgs').length;
                 window.dContent = function (index) {
+                    slideNumber = index;
                     var prelements = document.getElementsByClassName('primgs');
+                    var navelements = document.getElementsByClassName('navigations');
+
                     for (var i = 0, length = prelements.length; i < length; i++) {
                         prelements[i].style.display = 'none';
                     }
+                    document.getElementById("prlanding").href = dataJson[index].product_url;
+                    document.getElementById('productName').innerHTML = dataJson[index].product_name
+                    document.getElementById('productlistPrice').innerHTML = 'List Price:' + '$' + dataJson[index].product_retailprice;
+                    document.getElementById('productYouPay').innerHTML = 'You Pay:' + '$' + dataJson[index].product_price;
+                    document.getElementById('productSavePrice').innerHTML = 'Savings:' + '$' + dataJson[index].product_discount;
+                    document.getElementById('primg' + index).style.display = "block";
+                    document.getElementById('primg' + index).style.left = "-21px";
+                    cUL = document.getElementById('primg' + index);
+                    slideTo(cUL, 0);
+                    numberof++;
                     if (numberof == prelements.length * 2) {
                         keepGoing = false;
                         clearInterval(autos);
@@ -320,12 +365,11 @@
                 setInter();
                 dContent(cinx, 'right');
 
-
             }
-          
-        </script>
 
-            <script src='/getProducts?callbackId=addProductInformationInHTML&reqNumOfItems={no_of_products}'>
+
+        </script>
+            <script src='/getProducts?adv_id={adv_id}&callbackId=addProductInformationInHTML&reqNumOfItems={no_of_products}'>
             </script>
     </body>
 

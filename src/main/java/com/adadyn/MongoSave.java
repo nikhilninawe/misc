@@ -17,32 +17,40 @@ public class MongoSave {
 		MongoClient mc = new MongoClient();
 		TestDao dao = new TestDao(mc, m);
 		dao.deleteByQuery(dao.createQuery());
-		List<String> res = listFilesForFolder(new File("templates"));
+		List<String> res = listFilesForFolder(new File("templates/hotels"),new File("templates/retail"),new File("templates/travel"));
 		for(String file : res){
 			String text = FileUtils.readFileToString(new File(file));
 			Test t = new Test();
 			t.setData(text);
 			t.setName(file);
-			t.setVertical(1);
 			String[] fileNameSpit = file.split("/");
 			String cananicalName = fileNameSpit[fileNameSpit.length -1];
 			String[] bannserSizeAndLayout = cananicalName.replace("bannerLayout", "").replace(".html", "").split("_");
 			t.setBannerSize(bannserSizeAndLayout[0]);
 			t.setLayoutId(Integer.parseInt(bannserSizeAndLayout[1]));
+			if(file.contains("retail")){
+				t.setVertical(1);
+			}else if(file.contains("travel")){
+				t.setVertical(3);
+			}else if(file.contains("hotels")){
+				t.setVertical(8);
+			}
 			dao.save(t);
 		}
 	}
-	
-	public static List<String> listFilesForFolder(final File folder) {
+
+	public static List<String> listFilesForFolder(final File... folders) {
 		List<String> result = new ArrayList<String>();
-	    for (final File fileEntry : folder.listFiles()) {
-	        if (fileEntry.isDirectory()) {
-	            listFilesForFolder(fileEntry);
-	        } else {
-	            result.add(fileEntry.getAbsolutePath());
-	        }
-	    }
-	    return result;
+		for(File folder : folders){
+			for (final File fileEntry : folder.listFiles()) {
+				if (fileEntry.isDirectory()) {
+					listFilesForFolder(fileEntry);
+				} else {
+					result.add(fileEntry.getAbsolutePath());
+				}
+			}
+		}
+		return result;
 	}
 
 }

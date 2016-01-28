@@ -1,7 +1,7 @@
-* cp ~/workspace/acecreativetemplates/retail/Layout1/* templates/
-* cp ~/workspace/acecreativetemplates/retail/Layout2/* templates/
-* cp ~/workspace/acecreativetemplates/retail/Layout3/* templates/
-* cp ~/workspace/acecreativetemplates/retail/Layout4/* templates/
+* cp ~/workspace/acecreativetemplates/retail/Layout1/* templates/retail/
+* cp ~/workspace/acecreativetemplates/retail/Layout2/* templates/retail/
+* cp ~/workspace/acecreativetemplates/retail/Layout3/* templates/retail/
+* cp ~/workspace/acecreativetemplates/retail/Layout4/* templates/retail/
 
 * java -jar build/libs/misc.jar
 * rm output
