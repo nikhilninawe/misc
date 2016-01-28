@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
-import org.mongodb.morphia.Key;
 import org.mongodb.morphia.Morphia;
 
 import com.mongodb.MongoClient;
@@ -17,14 +16,20 @@ public class MongoSave {
 		Morphia m = new Morphia();
 		MongoClient mc = new MongoClient();
 		TestDao dao = new TestDao(mc, m);
+		dao.deleteByQuery(dao.createQuery());
 		List<String> res = listFilesForFolder(new File("templates"));
 		for(String file : res){
 			String text = FileUtils.readFileToString(new File(file));
 			Test t = new Test();
 			t.setData(text);
 			t.setName(file);
-			Key<Test> key = dao.save(t);
-			System.out.println("Id is :" + key.getId());
+			t.setVertical(1);
+			String[] fileNameSpit = file.split("/");
+			String cananicalName = fileNameSpit[fileNameSpit.length -1];
+			String[] bannserSizeAndLayout = cananicalName.replace("bannerLayout", "").replace(".html", "").split("_");
+			t.setBannerSize(bannserSizeAndLayout[0]);
+			t.setLayoutId(Integer.parseInt(bannserSizeAndLayout[1]));
+			dao.save(t);
 		}
 	}
 	

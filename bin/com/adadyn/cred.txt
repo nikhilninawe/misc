@@ -1,8 +1,0 @@
-
-define([],function(){
-        return {
-        baseUrl: 'https://platform.adadyn.com/api',
-        hostUrl: 'https://platform.adadyn.com/acezen/',
-        trackingID: 'UA-65740665-2'
-    };
-});

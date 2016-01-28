@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> Banner Layout 120x600 03 </title>
+    <title> Banner Layout 300x250 03 </title>
     <style type="text/css">
         * {
             margin: 0px;
@@ -35,8 +35,8 @@
         
         #subWrapper {
             position: absolute;
-            width: 118px;
-            height: 598px;
+            width: 298px;
+            height: 248px;
             border: 1px solid #828186;
             background: #fff;
             top: 0;
@@ -45,130 +45,124 @@
             left: 0;
         }
         
-        #middLine {
-            width: 118px;
-            border-top: 1px solid #828186;
+        #middLineDiv {
+            width: 298px;
             position: absolute;
             z-index: 1;
-            top: 325px;
+            top: 0px;
             left: 0px;
-            height: 298px;
+            height: 105px;
+            border-bottom: 1px solid #828186;
+        }
+        
+        .product {
+            width: 85px;
+            height: 85px;
+            text-align: center;
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            left: 0px;
+            object-fit: cover;
+            border: 1px solid #a7a9ac;
+            overflow: hidden;
         }
         
         #sublogo {
-            width: 108px;
-            height: 60px;
+            position: absolute;
+            top: 212px;
+            z-index: 2;
+            width: 298px;
+            height: 33px;
+            float: left;
             text-align: center;
-            padding: 5px;
+            margin: 2px 0px;
             object-fit: cover;
-            display: table-cell;
-            vertical-align: middle;
+            border-top: 1px solid #828186;
         }
         
         #sublogo img {
             max-width: 80%;
             max-height: 80%;
-        }
-        
-        .product {
-            width: 88px;
-            height: 88px;
-            text-align: center;
-            position: absolute;
-            z-index: 1;
-            top: 0px;
-            left: 14px;
             object-fit: cover;
-            border: 1px solid #a7a9ac;
-        }
-        
-        .arrowRight {
-            position: absolute;
-            z-index: 4;
-            top: 38px;
-            right: 0px;
-            cursor: pointer;
-        }
-        
-        .arrowLeft {
-            position: absolute;
-            z-index: 4;
-            top: 38px;
-            left: 0px;
-            cursor: pointer;
         }
         
         .productName {
             position: absolute;
-            width: 110px;
-            height: 30px;
+            width: 180px;
+            height: 15px;
             overflow: hidden;
-            top: 105px;
-            left: 4px;
+            top: -1px;
+            left: 100px;
             font-family: Calibri, Arial, helvetica, sans-serif !important;
-            font-size: 11px;
+            font-size: 14px;
             color: #58585a;
-            text-align: center;
+            text-align: left;
             z-index: 4;
             display: block;
+            line-height: 1.1;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
         }
         
         .productlistPrice {
             position: absolute;
-            width: 110px;
-            height: 15px;
+            width: 180px;
+            height: 18px;
             overflow: hidden;
-            top: 133px;
-            left: 4px;
+            top: 15px;
+            left: 100px;
             font-family: Calibri, Arial, helvetica, sans-serif !important;
-            font-size: 11px;
+            font-size: 14px;
             color: #939598;
-            text-align: center;
+            text-align: left;
             z-index: 4;
         }
         
         .productYouPay {
             position: absolute;
-            width: 110px;
-            height: 15px;
+            width: 180px;
+            height: 18px;
             overflow: hidden;
-            top: 148px;
-            left: 4px;
+            top: 32px;
+            left: 100px;
             font-family: Calibri, Arial, helvetica, sans-serif !important;
-            font-size: 11px;
+            font-size: 14px;
             color: #58585a;
-            text-align: center;
+            text-align: left;
             z-index: 4;
         }
         
         .productSavePrice {
             position: absolute;
-            width: 110px;
-            height: 15px;
+            width: 180px;
+            height: 18px;
             overflow: hidden;
-            top: 163px;
-            left: 4px;
+            top: 49px;
+            left: 100px;
             font-family: Calibri, Arial, helvetica, sans-serif !important;
             font-weight: bold;
-            font-size: 11px;
+            font-size: 14px;
             color: #ed1c24;
-            text-align: center;
+            text-align: left;
             z-index: 4;
         }
         
         .divBTN {
-            width: 118px;
-            height: 22px;
+            top: 67px;
+            left: 100px;
+            float: left;
             position: absolute;
-            top: 200px;
-            text-align: center;
+            z-index: 3;
         }
         
         .divBTN .button {
             display: inline;
             overflow: hidden;
             font-family: Calibri, Arial, helvetica, sans-serif !important;
-            font-size: 15px;
+            font-size: 13px;
             font-weight: bold;
             padding: 2px 10px;
             color: #fff;
@@ -178,35 +172,38 @@
         }
         
         #productGrup0 {
-            position: absolute;
-            top: 75px;
-            left: 0px;
-            width: 118px;
-            height: 241px;
+              position: absolute;
+              z-index: 5;
+              top: 9px;
+              left: 8px;
+              cursor: pointer;
         }
         
         #productGrup1 {
             position: absolute;
-            top: 350px;
-            left: 0px;
-            width: 118px;
-            height: 241px;
+            z-index: 1;
+            top: 117px;
+            left: 8px;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-
     <div id="subWrapper">
-        <div id="sublogo"><img src="{logo}"> </div>
         <div id="product"></div>
-
+        <div id="middLineDiv"> </div>
+        <div id="sublogo"><img src="{logo}"> </div>
     </div>
-
-<script>
+   <script>
         var dataJson; 
         var row = ''; 
+        var autos;
+        var cinx = 0;
         var index =0;
+        var keepGoing = true;
+        var numberof = 0; 
+        var slideNumber = 0;
         var jsonlength;
     function addProductInformationInHTML( jsonArray ) {
         if (!(jsonArray instanceof Array)) { 
@@ -217,36 +214,29 @@
          var prlist = document.getElementById('product');
          for (var i = 0; i < jsonlength; ++i){
              
-             row = '<a id="productGrup'+i+'" href="'+dataJson[i].product_url+'" target="_blank"><div class="product"><img src="'+dataJson[i].product_smallimage+'"></div><div class="productName" id="productName'+i+'">'+dataJson[i].product_name+'</div><div class="productlistPrice">'+dataJson[i].product_currency+''+dataJson[i].product_retailprice+'</div><div class="productYouPay">'+dataJson[i].product_currency+''+dataJson[i].product_price+'</div><div class="productSavePrice" id="productSavePrice'+i+'"></div><div class="divBTN"><div class="button"> {button_text} </div></div></a>';
+             row = '<a id="productGrup'+i+'" href="'+dataJson[i].product_url+'" target="_blank"><div class="product"><img src="'+dataJson[i].product_smallimage+'"></div><div class="productName">'+dataJson[i].product_name+'</div><div class="productlistPrice">List Price: '+unicodeToChar(dataJson[index].product_currency)+' '+dataJson[i].product_retailprice+'</div><div class="productYouPay">You Pay: '+unicodeToChar(dataJson[index].product_currency)+' '+dataJson[i].product_price+'</div><div class="productSavePrice" id="productSavePrice'+i+'"></div><div class="divBTN"><div class="button">  {button_text} </div></div></a>';
              prlist.insertAdjacentHTML('beforeend', row);
-             ellipsizeTextBox('productName'+i);
              calSavings(i);
          }
 
-        function ellipsizeTextBox(eventId) {
-             var el = document.getElementById(eventId);
-             var keep = el.innerHTML;
-                while(el.scrollHeight > el.offsetHeight) {
-                    el.innerHTML = keep;
-                    el.innerHTML = el.innerHTML.substring(0, el.innerHTML.length-1);
-                    keep = el.innerHTML;
-                    el.innerHTML = el.innerHTML + "...";
-                }  
-         }
+        function unicodeToChar(text) {
+            var res = text.replace("U+", "&#x");
+            return res.toLowerCase();
+        }
         function calSavings(index){
             
           if(dataJson[index].product_discount != 0){
                 var savingsamnt = dataJson[index].product_retailprice - dataJson[index].product_price; 
-             document.getElementById('productSavePrice'+index).innerHTML = 'Savings: '+dataJson[index].product_currency+''+savingsamnt+'';
+             document.getElementById('productSavePrice'+index).innerHTML = 'You Save: '+unicodeToChar(dataJson[index].product_currency)+' '+savingsamnt+'';
             }else{
               document.getElementById('productSavePrice'+index).innerHTML = '';  
             }  
             
         }
-   
+           
     }
-
-   </script>
+   
+</script>
 <script src='/getProducts?adv_id={adv_id}&callbackId=addProductInformationInHTML&reqNumOfItems={no_of_products}'>
 </script>
 </body>

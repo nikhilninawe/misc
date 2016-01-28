@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title> Banner Layout 728x80 03 </title>
+        <style type="text/css">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            a img {
+                border: 0px;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                width: auto\9;
+                /* ie8 */
+
+                object-fit: cover;
+            }
+
+            a {
+                margin: 0px;
+                padding: 0px;
+                text-decoration: none;
+                font-family: Calibri, Arial, helvetica, sans-serif !important;
+            }
+
+            body {
+                text-decoration: none;
+                font-family: Calibri, Arial, helvetica, sans-serif !important;
+            }
+
+            #subWrapper {
+                position: absolute;
+                width: 726px;
+                height: 88px;
+                border: 1px solid #828186;
+                background: #fff;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+            }
+
+            #middLine {
+                border-left: 1px solid #828186;
+                position: absolute;
+                z-index: 1;
+                top: 0px;
+                left: 435px;
+                width: 290px;
+                height: 88px;
+            }
+
+            #sublogo {
+                width: 136px;
+                height: 78px;
+                text-align: center;
+                padding: 5px;
+                object-fit: cover;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            #sublogo img {
+                max-width: 80%;
+                max-height: 80%;
+            }
+
+            .product {
+                width: 80px;
+                height: 80px;
+                text-align: center;
+                position: absolute;
+                z-index: 1;
+                top: 2px;
+                left: 18px;
+                object-fit: cover;
+                border: 1px solid #a7a9ac;
+            }
+
+            .arrowRight {
+                position: absolute;
+                z-index: 4;
+                top: 37px;
+                left: 104px;
+                cursor: pointer;
+            }
+
+            .arrowLeft {
+                position: absolute;
+                z-index: 4;
+                top: 37px;
+                left: 0px;
+                cursor: pointer;
+            }
+
+            .productName {
+                position: absolute;
+                width: 150px;
+                height: 30px;
+                overflow: hidden;
+                top: 3px;
+                left: 130px;
+                font-family: Calibri, Arial, helvetica, sans-serif !important;
+                font-size: 11px;
+                color: #58585a;
+                text-align: left;
+                z-index: 4;
+                display: block;
+            }
+
+            .productlistPrice {
+                position: absolute;
+                width: 150px;
+                height: 15px;
+                overflow: hidden;
+                top: 28px;
+                left: 130px;
+                font-family: Calibri, Arial, helvetica, sans-serif !important;
+                font-size: 11px;
+                color: #939598;
+                text-align: left;
+                z-index: 4;
+                text-decoration: line-through;
+            }
+
+            .productYouPay {
+                position: absolute;
+                width: 150px;
+                height: 15px;
+                overflow: hidden;
+                top: 41px;
+                left: 130px;
+                font-family: Calibri, Arial, helvetica, sans-serif !important;
+                font-size: 11px;
+                color: #58585a;
+                text-align: left;
+                z-index: 4;
+            }
+
+            .productSavePrice {
+                position: absolute;
+                width: 150px;
+                height: 15px;
+                overflow: hidden;
+                top: 53px;
+                left: 130px;
+                font-family: Calibri, Arial, helvetica, sans-serif !important;
+                font-weight: bold;
+                font-size: 11px;
+                color: #ed1c24;
+                text-align: left;
+                z-index: 4;
+            }
+
+            .divBTN {
+                width: 150px;
+                height: 22px;
+                text-align: left;
+                position: absolute;
+                top: 65px;
+                left: 130px;
+                z-index: 5;
+            }
+
+            .divBTN .button {
+                display: inline;
+                overflow: hidden;
+                font-family: Calibri, Arial, helvetica, sans-serif !important;
+                font-size: 11px;
+                font-weight: bold;
+                padding: 2px 10px;
+                color: #fff;
+                background: #818285;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            #producGrupOne {
+                position: absolute;
+                top: 1px;
+                left: 146px;
+                width: 280px;
+                height: 86px;
+            }
+
+            #producGrupTwo {
+                position: absolute;
+                top: 1px;
+                left: 446px;
+                width: 280px;
+                height: 86px;
+            }
+            #product0 img{
+                width: 62px;
+                height: 62px;
+            }
+            #product1 img{
+                width: 80px;
+                height: 80px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="subWrapper">
+            <div id="sublogo"><img src="{logo}"></div>
+
+            <div id="producGrupOne">           
+                <a href="#" id="prlanding0" target="_blank">   
+                    <div class="product" id="product0"> </div>  
+                    <div class="productName" id="productName0"></div>      
+                    <div class="productlistPrice" id="productlistPrice0"></div>
+                    <div class="productYouPay" id="productYouPay0"></div>
+                    <div class="productSavePrice" id="productSavePrice0"></div>
+                </a>
+                <div class="divBTN">
+                    <div class="button"> {button_text} </div>
+                </div>
+            </div>
+
+            <div id="middLine"> </div>
+
+            <div id="producGrupTwo">
+
+                <a href="#" id="prlanding1" target="_blank">   
+                    <div class="product" id="product1"> </div>  
+                    <div class="productName" id="productName1"></div>      
+                    <div class="productlistPrice" id="productlistPrice1"></div>
+                    <div class="productYouPay" id="productYouPay1"></div>
+                    <div class="productSavePrice" id="productSavePrice1"></div>
+                </a>
+                <div class="divBTN">
+                    <div class="button"> {button_text} </div>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            var dataJson;
+            var row = '';
+            var nav = '';
+            var autos;
+            var cinx = 0;
+            var index = 0;
+            var keepGoing = true;
+            var numberof = 0;
+
+            function addProductInformationInHTML(jsonArray) {
+                if (!(jsonArray instanceof Array)) {
+                    jsonArray = jsonArray.products;
+                }
+                dataJson = jsonArray;
+                var prlist = document.getElementById('product');
+                var navlist = document.getElementById('nav');
+
+                for (var i = 0; i < dataJson.length; ++i) {
+                    prlist = document.getElementById('product' + i);
+                    row = '<img src="' + dataJson[i].product_smallimage + '" id="primg' + i + '" style="disply:none;" class="primgs">';
+                    prlist.insertAdjacentHTML('beforeend', row);
+                    document.getElementById('productName' + i).innerHTML = dataJson[i].product_name;
+                    document.getElementById('productlistPrice' + i).innerHTML = 'List Price: ' + '$' + dataJson[i].product_retailprice;
+                    document.getElementById('productYouPay' + i).innerHTML = 'You Pay: ' + '$' + dataJson[i].product_price;
+                    document.getElementById('productSavePrice' + i).innerHTML = 'Savings: ' + '$' + dataJson[i].product_discount;
+                    document.getElementById('prlanding' + i).href = dataJson[i].product_smallimage;
+                }
+
+                itemAmt = document.getElementsByClassName('primgs').length;
+                window.dContent = function (index) {
+                    var prelements = document.getElementsByClassName('primgs');
+                    for (var i = 0, length = prelements.length; i < length; i++) {
+                        prelements[i].style.display = 'none';
+                    }
+                    if (numberof == prelements.length * 2) {
+                        keepGoing = false;
+                        clearInterval(autos);
+                    }
+                }
+
+                window.clicknav = function (val) {
+                    dContent(val);
+                    keepGoing = false;
+                    clearInterval(autos);
+                }
+
+                function slideTo(el, left) {
+                    var steps = 15;
+                    var timer = 15;
+                    var elLeft = parseInt(el.style.left) || 0;
+                    var diff = left - elLeft;
+                    var stepSize = diff / steps;
+
+                    function step() {
+                        elLeft += stepSize;
+                        el.style.left = elLeft + "px";
+                        if (--steps) {
+                            setTimeout(step, timer);
+                        }
+                    }
+                    if (keepGoing) {
+                        step();
+                    }
+                }
+
+                function setInter() {
+                    autos = setInterval(function () {
+                        cinx += 1;
+                        if (cinx > itemAmt - 1) {
+                            cinx = 0;
+                        }
+                        dContent(cinx, 'right');
+                    }, 3000);
+                }
+                setInter();
+                dContent(cinx, 'right');
+
+
+            }
+          
+        </script>
+
+            <script src='/getProducts?callbackId=addProductInformationInHTML&reqNumOfItems={no_of_products}'>
+            </script>
+    </body>
+
+</html>

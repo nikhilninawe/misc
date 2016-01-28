@@ -2,7 +2,6 @@ package com.adadyn;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -10,6 +9,7 @@ public class CountryCurrency {
 
 	public static void main(String[] args) throws IOException{
 		File f = new File("/Users/nikhilninawe/Desktop/currency_1.sql");
+		@SuppressWarnings("resource")
 		BufferedReader br = new BufferedReader(new FileReader(f));
 		String line = null;
 		int i = 2;

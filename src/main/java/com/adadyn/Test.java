@@ -11,6 +11,10 @@ public class Test {
 	@Id private ObjectId id;
 	@Property private String data;
 	@Property private String name;
+	@Property private String bannerSize;
+	@Property private int vertical;
+	@Property private int layoutId;
+	
 	public ObjectId getId() {
 		return id;
 	}
@@ -28,6 +32,24 @@ public class Test {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getBannerSize() {
+		return bannerSize;
+	}
+	public void setBannerSize(String bannerSize) {
+		this.bannerSize = bannerSize;
+	}
+	public int getVertical() {
+		return vertical;
+	}
+	public void setVertical(int vertical) {
+		this.vertical = vertical;
+	}
+	public int getLayoutId() {
+		return layoutId;
+	}
+	public void setLayoutId(int layoutId) {
+		this.layoutId = layoutId;
 	}
 
 }

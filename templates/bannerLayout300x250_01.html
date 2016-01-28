@@ -1,5 +1,5 @@
 <html>
-\<head>
+<head>
     <meta charset="utf-8">
     <title> Banner Layout 300x250 01 </title>
     <style type="text/css">
@@ -80,6 +80,7 @@
             z-index: 1;
             top: 59px;
             left: 25px;
+            overflow: hidden;
         }
         
         #product img {
@@ -260,8 +261,6 @@
         <div id="productYouPay"></div>
         <div id="productSavePrice"></div>
 
-        
-         
         <div id="product"></div>
         <div id="sublogo"><img src="{logo}"> </div>
         <div id="middLine"> </div>
@@ -307,13 +306,14 @@
          navelements[i].style.border = '1px solid #c0bfbf';
          
     }
+             var currencyString = unicodeToChar(dataJson[index].product_currency);
              document.getElementById("prlanding").href= dataJson[index].product_url;   
              document.getElementById('productName').innerHTML = dataJson[index].product_name;
-             document.getElementById('productYouPay').innerHTML = 'List Price:'+dataJson[index].product_currency+''+dataJson[index].product_retailprice;
-             document.getElementById('productlistPrice').innerHTML = 'You Pay:'+dataJson[index].product_currency+''+dataJson[index].product_price;
+             document.getElementById('productYouPay').innerHTML = 'List Price: '+currencyString+' '+dataJson[index].product_retailprice;
+             document.getElementById('productlistPrice').innerHTML = 'You Pay: '+currencyString+' '+dataJson[index].product_price;
             if(dataJson[index].product_discount != 0){
                 var savingsamnt = dataJson[index].product_retailprice - dataJson[index].product_price; 
-             document.getElementById('productSavePrice').innerHTML = 'You Save:'+dataJson[index].product_currency+''+savingsamnt+'';
+             document.getElementById('productSavePrice').innerHTML = 'You Save: '+currencyString+' '+savingsamnt+'';
             }else{
               document.getElementById('productSavePrice').innerHTML = '';  
             }
@@ -329,7 +329,10 @@
                 clearInterval(autos);
                 }
          } 
-
+         function unicodeToChar(text) {
+            var res = text.replace("U+", "&#x");
+            return res.toLowerCase();
+        }
          window.clicknav = function (val){
              dContent(val);
              keepGoing = false;
@@ -379,8 +382,8 @@
              dContent(slideNumber);
         }
     }
-    
-    </script>
+
+</script>
 <script src='/getProducts?adv_id={adv_id}&callbackId=addProductInformationInHTML&reqNumOfItems={no_of_products}'>
 </script>
 </body>

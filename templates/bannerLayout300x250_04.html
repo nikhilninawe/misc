@@ -121,6 +121,7 @@
             z-index: 1;
             top: 30px;
             left: 160px;
+            overflow: hidden;
         }
         
         #product img {
@@ -150,7 +151,7 @@
         #productName {
             position: absolute;
             width: 153px;
-            height: 32px;
+            height: 30px;
             overflow: hidden;
             top: 158px;
             left: 144px;
@@ -216,14 +217,11 @@
 <body>
     <div id="subWrapper">
         
-        <div id="divBTN">
-            <div id="button"> {button_text} </div>
-        </div>
-        
         <div id="arrowLeft"><img onclick="changeImg(-1)" src="//dt0cmlv19kyas.cloudfront.net/creatives/appBanner/bannerArrowL.png"> </div>
         <div id="arrowRight"><img onclick="changeImg(1)" src="//dt0cmlv19kyas.cloudfront.net/creatives/appBanner/bannerArrowR.png"> </div>
         
         <a href="#" id="prlanding" target="_blank">
+            
         <div id="sublogo"><img src="{logo}"></div>
         <div id="customInfo">{message}</div>
         <div id="productSavePrice"></div>
@@ -232,6 +230,10 @@
         <div id="productName"></div>
         <div id="product"></div>
         <div id="rightDivBg"> </div>
+        <div id="divBTN">
+            <div id="button"> {button_text} </div>
+        </div>
+        
         </a>
     </div>
        <script>
@@ -267,13 +269,14 @@
     for(var i = 0, length = prelements.length; i < length; i++) {
          prelements[i].style.display = 'none';
     }
+             var currencyString = unicodeToChar(dataJson[index].product_currency);
              document.getElementById("prlanding").href= dataJson[index].product_url;   
              document.getElementById('productName').innerHTML = dataJson[index].product_name;
-             document.getElementById('productYouPay').innerHTML = 'List Price:'+dataJson[index].product_currency+''+dataJson[index].product_retailprice;
-             document.getElementById('productlistPrice').innerHTML = 'You Pay:'+dataJson[index].product_currency+''+dataJson[index].product_price;
+             document.getElementById('productYouPay').innerHTML = 'List Price: '+currencyString+' '+dataJson[index].product_retailprice;
+             document.getElementById('productlistPrice').innerHTML = 'You Pay: '+currencyString+' '+dataJson[index].product_price;
             if(dataJson[index].product_discount != 0){
                 var savingsamnt = dataJson[index].product_retailprice - dataJson[index].product_price; 
-             document.getElementById('productSavePrice').innerHTML = 'You Save:'+dataJson[index].product_currency+''+savingsamnt+'';
+             document.getElementById('productSavePrice').innerHTML = 'You Save: '+currencyString+' '+savingsamnt+'';
             }else{
               document.getElementById('productSavePrice').innerHTML = '';  
             }
@@ -288,7 +291,10 @@
                 clearInterval(autos);
                 }
          } 
-
+         function unicodeToChar(text) {
+            var res = text.replace("U+", "&#x");
+            return res.toLowerCase();
+        }
           function slideTo(el, left) {
               var steps = 15;
               var timer = 15;
@@ -333,10 +339,8 @@
              dContent(slideNumber);
         }
     }
-    
 
-    
-    </script>
+</script>
 <script src='/getProducts?adv_id={adv_id}&callbackId=addProductInformationInHTML&reqNumOfItems={no_of_products}'>
 </script>
 </body>
